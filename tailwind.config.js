@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
+    },
+  },
   plugins: [],
+  darkMode: "class",
 };

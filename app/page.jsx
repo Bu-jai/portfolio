@@ -1,9 +1,15 @@
-import Image from "next/image";
+import About from "@/components/About";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      <h1>Hello World!</h1>
+    <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl">
+      <Hero />
+      <About />
+      <Projects />
     </main>
   );
-}
+};
+
+export default Home;
