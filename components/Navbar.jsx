@@ -41,7 +41,7 @@ const Navbar = () => {
               <Link
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/"}
-                smooth={true}
+                smooth={false}
               >
                 Home
               </Link>
