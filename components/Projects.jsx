@@ -36,13 +36,15 @@ const Projects = () => {
               <div key={id}>
                 <div className="flex flex-col md:flex-row md:space-x-12">
                   <div className="mt-6 md:w-1/2">
-                    <Image
-                      className="rounded-xl shadow-md hover:opacity-50"
-                      src={project.image}
-                      alt={project.name}
-                      width={1000}
-                      height={1000}
-                    />
+                    <Link href={project.github} target="_blank">
+                      <Image
+                        className="rounded-xl shadow-md hover:opacity-50"
+                        src={project.image}
+                        alt={project.name}
+                        width={1000}
+                        height={1000}
+                      />
+                    </Link>
                   </div>
                   <div className="mt-10 md:w-1/2">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>

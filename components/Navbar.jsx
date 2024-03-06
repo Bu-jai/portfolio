@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import { useTheme } from "next-themes";
 
 import { TbMenu2, TbMoonFilled, TbSun, TbX } from "react-icons/tb";
@@ -17,9 +18,11 @@ const Navbar = () => {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-5 md:block">
-            <div className="container flex items-center space-x-2">
-              <h2 className="text-2xl font-bold">Jireh Siayngco</h2>
-            </div>
+            <Link href={"/"} smooth={false}>
+              <div className="container flex items-center space-x-2">
+                <h2 className="text-2xl font-bold">Jireh Siayngco</h2>
+              </div>
+            </Link>
             <div className="md:hidden flex items-center">
               <button onClick={() => setNavbarOpen(!navbarOpen)}>
                 {navbarOpen ? (
@@ -42,6 +45,7 @@ const Navbar = () => {
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/"}
                 smooth={false}
+                onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 Home
               </Link>
@@ -49,6 +53,7 @@ const Navbar = () => {
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/#about"}
                 smooth={false}
+                onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 About
               </Link>
@@ -56,6 +61,7 @@ const Navbar = () => {
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/#projects"}
                 smooth={false}
+                onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 Projects
               </Link>
