@@ -3,20 +3,17 @@ import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Providers from "./providers";
 import Head from "./head";
-
-// export const metadata = {
-//   title: "Jireh Siayngco",
-//   description: "An online portfolio.",
-// };
+import Footer from "@/components/Footer";
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head />
       <body className="dark:bg-stone-900">
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

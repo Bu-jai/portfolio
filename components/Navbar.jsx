@@ -6,11 +6,21 @@ import { useTheme } from "next-themes";
 
 import { TbMenu2, TbMoonFilled, TbSun, TbX } from "react-icons/tb";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const useThemeSwitcher = () => {
+  const [mode, setMode] = useState("");
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMode(theme);
+  }, [theme]);
+
+  return [mode, setTheme];
+};
 
 const Navbar = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const [theme, setTheme] = useThemeSwitcher();
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -18,7 +28,7 @@ const Navbar = () => {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-5 md:block">
-            <Link href={"/"} smooth={false}>
+            <Link href={"/"}>
               <div className="container flex items-center space-x-2">
                 <h2 className="text-2xl font-bold">Jireh Siayngco</h2>
               </div>
@@ -44,7 +54,6 @@ const Navbar = () => {
               <Link
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/"}
-                smooth={false}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 Home
@@ -52,7 +61,6 @@ const Navbar = () => {
               <Link
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/#about"}
-                smooth={false}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 About
@@ -60,12 +68,11 @@ const Navbar = () => {
               <Link
                 className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
                 href={"/#projects"}
-                smooth={false}
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
                 Projects
               </Link>
-              {currentTheme === "dark" ? (
+              {theme === "dark" ? (
                 <button onClick={() => setTheme("light")}>
                   <TbSun className="text-yellow-200 h-5 w-5" />
                 </button>

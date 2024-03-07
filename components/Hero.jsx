@@ -10,7 +10,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 const Hero = () => {
   return (
     <section id="home">
-      <div className="flex flex-col text-center items-center justify-center my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left ">
+      <div className="flex flex-col text-center items-center justify-center py-48 md:py-64 md:flex-row md:space-x-4 md:text-left ">
         <div className="md:w-1/2 md:mt-2">
           <Image
             className="rounded-full shadow-2xl"

@@ -7,8 +7,8 @@ import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl">
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
-      <div className="mx-auto p-4 flex flex-col text-cente md:flex-row md:justify-between">
+      <hr className="w-full h-0.5 mx-auto mt-0 bg-neutral-200 border-0"></hr>
+      <div className="mx-auto p-4 flex flex-col text-center md:flex-row md:justify-between">
         <div className="text-neutral-900 dark:text-neutral-200">
           <p>&copy; 2024 Jireh Siayngco. All rights reserved.</p>
         </div>
