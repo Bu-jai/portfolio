@@ -17,7 +17,7 @@ const About = () => {
         <div className="text-lg text-neutral-900 dark:text-neutral-200 md:text-xl mt-5">
           <AboutReveal>
             <p className="leading-9 pb-3">
-              Hello, my name is Jireh Siayngco. I'm a avid & quick learner,
+              Hello, my name is Jireh Siayngco. I'm an avid & quick learner,
               detail-oriented, a critical thinker, and keen on exploring new
               technologies.
             </p>
@@ -28,16 +28,16 @@ const About = () => {
               I have always been fascinated with technologies and have had a
               knack with computers ever since I was a kid. When I was studying
               at college, I had the opportunity to be a software developer
-              intern for Global Talent Accelerator where I learned React. I
-              worked on business projects during my time that allowed my skills
-              to develop.
+              intern for Global Talent Accelerator where I learned React. During
+              my internship, I worked on business projects that further
+              developed my technical & communication skills.
             </p>
           </AboutReveal>
           <br />
           <AboutReveal>
             <p className="leading-9 pb-3">
               Whenever I am not coding or learning new technologies, I have
-              other hobbies that keeps me busy. These include reading books,
+              other hobbies that keep me busy. These include reading books,
               playing video games, and hanging out with friends.
             </p>
           </AboutReveal>
