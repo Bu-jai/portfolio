@@ -74,12 +74,20 @@ const Projects = () => {
                       <p className="text-xl text-neutral-900 dark:text-neutral-200">
                         {project.description}
                       </p>
-                      <div className="mt-4">
-                        <Link href={project.github} target="_blank">
-                          <motion.div>
+                      <div className="mt-4 flex">
+                        <motion.div
+                          whileHover={{ scale: 1.3 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 17,
+                          }}
+                        >
+                          <Link href={project.github} target="_blank">
                             <FaCode className="h-5 w-5 text-neutral-700 dark:text-neutral-200" />
-                          </motion.div>
-                        </Link>
+                          </Link>
+                        </motion.div>
                       </div>
                     </ProjectsDescReveal>
                   </div>
