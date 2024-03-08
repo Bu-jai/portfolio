@@ -7,7 +7,7 @@ import { TbMenu2, TbMoonFilled, TbSun, TbX } from "react-icons/tb";
 import { useEffect, useState } from "react";
 
 const useThemeSwitcher = () => {
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState("dark");
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
