@@ -7,8 +7,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { FaCode } from "react-icons/fa6";
 
 import Reveal from "@/components/reveal/Reveal";
-import ProjectsImgReveal from "@/components/reveal/ProjectsImgReveal";
-import ProjectsDescReveal from "@/components/reveal/ProjectsDescReveal";
 
 const projectsList = [
   {
@@ -43,7 +41,7 @@ const Projects = () => {
               <div key={id}>
                 <div className="flex flex-col md:flex-row md:space-x-12">
                   <div className="mt-6 md:w-1/2">
-                    <ProjectsImgReveal>
+                    <Reveal>
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -64,10 +62,10 @@ const Projects = () => {
                           />
                         </Link>
                       </motion.div>
-                    </ProjectsImgReveal>
+                    </Reveal>
                   </div>
                   <div className="mt-10 md:w-1/2">
-                    <ProjectsDescReveal>
+                    <Reveal>
                       <h1 className="text-3xl font-bold mb-6">
                         {project.name}
                       </h1>
@@ -89,7 +87,7 @@ const Projects = () => {
                           </Link>
                         </motion.div>
                       </div>
-                    </ProjectsDescReveal>
+                    </Reveal>
                   </div>
                 </div>
               </div>

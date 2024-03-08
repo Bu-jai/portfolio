@@ -22,7 +22,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="w-full mx-auto px-20 fixed top-0 z-50 bg-white shadow dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <nav className="w-full mx-auto px-12 sm:px-24 fixed top-0 z-50 bg-white shadow dark:bg-stone-900 dark:border-b dark:border-stone-600">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-5 md:block">
