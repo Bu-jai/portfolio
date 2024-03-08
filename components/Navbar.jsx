@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-
 import { useTheme } from "next-themes";
-
+import { motion } from "framer-motion";
 import { TbMenu2, TbMoonFilled, TbSun, TbX } from "react-icons/tb";
-
 import { useEffect, useState } from "react";
 
 const useThemeSwitcher = () => {
@@ -34,13 +32,18 @@ const Navbar = () => {
               </div>
             </Link>
             <div className="md:hidden flex items-center">
-              <button onClick={() => setNavbarOpen(!navbarOpen)}>
+              <motion.button
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
                 {navbarOpen ? (
-                  <TbX className="h-5 w-5" />
+                  <TbX className="h-6 w-6" />
                 ) : (
-                  <TbMenu2 className="h-5 w-5" />
+                  <TbMenu2 className="h-6 w-6" />
                 )}
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
@@ -51,35 +54,63 @@ const Navbar = () => {
             }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <Link
-                className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
-                href={"/"}
-                onClick={() => setNavbarOpen(!navbarOpen)}
+              <motion.div
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                Home
-              </Link>
-              <Link
-                className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
-                href={"/#about"}
-                onClick={() => setNavbarOpen(!navbarOpen)}
+                <Link
+                  className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-400"
+                  href={"/"}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                  Home
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                About
-              </Link>
-              <Link
-                className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50"
-                href={"/#projects"}
-                onClick={() => setNavbarOpen(!navbarOpen)}
+                <Link
+                  className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-400"
+                  href={"/#about"}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                  About
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                Projects
-              </Link>
+                <Link
+                  className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-400"
+                  href={"/#projects"}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                  Projects
+                </Link>
+              </motion.div>
               {theme === "dark" ? (
-                <button onClick={() => setTheme("light")}>
-                  <TbSun className="text-yellow-200 h-5 w-5" />
-                </button>
+                <motion.button
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  onClick={() => setTheme("light")}
+                >
+                  <TbSun className="text-yellow-200 h-6 w-6" />
+                </motion.button>
               ) : (
-                <button onClick={() => setTheme("dark")}>
-                  <TbMoonFilled className="h-5 w-5" />
-                </button>
+                <motion.button
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  onClick={() => setTheme("dark")}
+                >
+                  <TbMoonFilled className="text-slate-600 h-6 w-6" />
+                </motion.button>
               )}
             </div>
           </div>
